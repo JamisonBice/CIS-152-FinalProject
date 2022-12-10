@@ -116,7 +116,6 @@ public class NewShopListPanel extends JPanel {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			// TODO Auto-generated method stub
 			if (e.getSource() == bSubmitNewList) {// Submit creates the item like before but also creates a shoplist
 													// with the new item and adds the shoplist to the shopper stack
 				try {
@@ -148,10 +147,7 @@ public class NewShopListPanel extends JPanel {
 
 		}
 
-		// public void SendObject() {
-		// newShopList
-		// }
-
+		
 		private void clearAllFields() {// Set to defaults
 			tListName.setText("");
 			comboBoxStore.setSelectedIndex(0);

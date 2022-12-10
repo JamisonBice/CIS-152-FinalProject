@@ -92,7 +92,6 @@ public class NewListItemPanel extends JPanel {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			// TODO Auto-generated method stub
 			if (e.getSource() == bSubmitNewList) {//Submit 
 				try {
 					ListItem newItem = new ListItem(tItemName.getText(), (String) comboBoxStore.getSelectedItem(),// Gets all thje text and makes a new List Item

@@ -62,7 +62,6 @@ public class ViewShoppingListPanel extends JPanel {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			// TODO Auto-generated method stub
 			if (e.getSource() == bAddItem) {// TO Create new Shopping list
 				removeAll();
 				setVisible(false);
@@ -70,9 +69,6 @@ public class ViewShoppingListPanel extends JPanel {
 				add(newShopListPanel);
 				validate();
 				setVisible(true);
-
-				// newShopList.addItem(newItem);
-				// Shopper.addNewList(newShopList);
 
 			} else if (e.getSource() == bReturnToMain) {// Return to main
 

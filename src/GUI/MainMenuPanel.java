@@ -76,7 +76,6 @@ public class MainMenuPanel extends JPanel {
 		}
 
 		private void sendToNewPanel(JPanel newPanel) {// Method to "send" the user to the next panel
-			// TODO Auto-generated method stub
 			removeAll();// Clears then creates the new panel
 			setVisible(false);
 			add(newPanel);
