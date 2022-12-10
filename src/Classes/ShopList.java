@@ -1,24 +1,8 @@
-/**************************************************************
-* Name        : ShopList.java
-* Author      : Jamison Bice
-* Created     : 08/12/2022
-* Course      : CIS 152 Data Structures
-* Version     : 1.0
-* OS          : Windows 10
-* IDE         : Eclipse 2022-06
-* Copyright   : This is my own original work based on
-*               specifications issued by our instructor
-* Description : An app that .... ADD HERE....
-*            Input: ADD HERE XXX
-*            Output: ADD HERE XXX
-* Academic Honesty: I attest that this is my original work.
-* I have not used unauthorized source code, either modified or 
-* unmodified. I have not given other fellow student(s) access to
-* my program.         
-***************************************************************/
+
 package Classes;
 
 import java.time.LocalDate;
+import java.util.Date;
 import java.util.LinkedList;
 
 /**
@@ -26,11 +10,82 @@ import java.util.LinkedList;
  *
  */
 public class ShopList {
-	
-	private int ID;
-	private String listName;
-	private LocalDate tripDate;
-	private Shopper shopper;
-	private LinkedList<ListItem> items;
+
+	private String listName;// Variables name
+	private Date tripDate;// Date when created
+	private LinkedList<ListItem> items;// Linked List of List Items
+
+	/**
+	 * @param iD
+	 * @param listName
+	 * @param tripDate
+	 */
+	public ShopList(String listName, Date tripDate) {// Constructor
+		setListName(listName);
+		setTripDate(tripDate);
+		items = new LinkedList<ListItem>();
+	}
+
+	/**
+	 * 
+	 */
+	public ShopList() {// Default Constructor
+		items = new LinkedList<ListItem>();
+
+	}
+
+	/**
+	 * @return the listName
+	 */
+	public String getListName() {// Getters and Setters
+		return listName;
+	}
+
+	/**
+	 * @param listName the listName to set
+	 */
+	public void setListName(String listName) {
+		this.listName = listName;
+	}
+
+	/**
+	 * @return the tripDate
+	 */
+	public Date getTripDate() {
+		return tripDate;
+	}
+
+	/**
+	 * @param tripDate the tripDate to set
+	 */
+	public void setTripDate(Date tripDate) {
+		this.tripDate = tripDate;
+	}
+
+	/**
+	 * @return the items
+	 */
+	public LinkedList<ListItem> getItems() {
+		return items;
+	}
+
+	/**
+	 * @param items the items to set
+	 */
+	public void setItems(LinkedList<ListItem> items) {
+		this.items = items;
+	}
+
+	@Override
+	public String toString() {// To Striong Standard
+		return "ShopList [listName=" + listName + ", tripDate=" + tripDate + ", items=" + items + "]";
+	}
+
+	/**
+	 * @param item
+	 */
+	public void addItem(ListItem item) { // Method used to add items to the Linked List
+		items.addFirst(item);
+	}
 
 }
